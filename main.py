@@ -1,2 +1,8 @@
-# main.py
-print("Hello Video Translator Backend!")
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello Video Translator Backend!"}
+
